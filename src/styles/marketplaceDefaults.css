@@ -1465,6 +1465,16 @@ textarea {
   }
 }
 
+.marketplaceModalHobbiesMargins {
+  /* Leave space between the input and the button below when the
+  viewport height is small */
+  margin-top: 24px;
+
+  @media (--viewportMedium) {
+    margin-top: 32px;
+  }
+}
+
 .marketplaceModalPasswordMargins {
   /* Leave space between the input and the button below when the
   viewport height is small */

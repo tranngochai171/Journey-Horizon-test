@@ -63,6 +63,9 @@ export const createCurrentUser = (id, attributes = {}, includes = {}) => ({
       lastName: `${id} last name`,
       displayName: `${id} display name`,
       abbreviatedName: `${id} abbreviated name`,
+      publicData: {
+        hobbies: 'Josh',
+      },
     },
     ...attributes,
   },

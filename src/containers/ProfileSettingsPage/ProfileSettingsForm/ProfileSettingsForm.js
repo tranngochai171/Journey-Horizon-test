@@ -100,6 +100,18 @@ class ProfileSettingsFormComponent extends Component {
           });
           const lastNameRequired = validators.required(lastNameRequiredMessage);
 
+          // Hobbies
+          const hobbiesLabel = intl.formatMessage({
+            id: 'ProfileSettingsForm.hobbiesLabel',
+          });
+          const hobbiesPlaceholder = intl.formatMessage({
+            id: 'ProfileSettingsForm.hobbiesPlaceholder',
+          });
+          const hobbiesRequiredMessage = intl.formatMessage({
+            id: 'ProfileSettingsForm.hobbiesRequired',
+          });
+          const hobbiesRequired = validators.required(lastNameRequiredMessage);
+
           // Bio
           const bioLabel = intl.formatMessage({
             id: 'ProfileSettingsForm.bioLabel',
@@ -286,6 +298,22 @@ class ProfileSettingsFormComponent extends Component {
                     label={lastNameLabel}
                     placeholder={lastNamePlaceholder}
                     validate={lastNameRequired}
+                  />
+                </div>
+              </div>
+              <div className={css.sectionContainer}>
+                <H4 as="h2" className={css.sectionTitle}>
+                  <FormattedMessage id="ProfileSettingsForm.yourHobbies" />
+                </H4>
+                <div className={css.nameContainer}>
+                  <FieldTextInput
+                    className={css.hobbies}
+                    type="text"
+                    id="hobbies"
+                    name="hobbies"
+                    label={hobbiesLabel}
+                    placeholder={hobbiesPlaceholder}
+                    validate={hobbiesRequired}
                   />
                 </div>
               </div>

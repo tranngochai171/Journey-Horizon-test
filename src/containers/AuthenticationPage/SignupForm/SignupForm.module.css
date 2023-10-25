@@ -28,6 +28,10 @@
   width: calc(66% - 9px);
 }
 
+.hobbies {
+  composes: marketplaceModalHobbiesMargins from global;
+}
+
 .password {
   composes: marketplaceModalPasswordMargins from global;
 }
